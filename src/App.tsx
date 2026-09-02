@@ -1,14 +1,33 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import ThemeToggle from './components/ThemeToggle'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState<'light' | 'dark'>(() =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light',
+  )
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+  }, [theme])
 
   return (
     <>
+      <ThemeToggle
+        theme={theme}
+        onToggle={() =>
+          setTheme((currentTheme) =>
+            currentTheme === 'dark' ? 'light' : 'dark'
+          )
+        }
+      />
+      
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
