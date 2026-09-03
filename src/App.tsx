@@ -52,7 +52,7 @@ function App() {
           <li>
             <a href="https://www.linkedin.com/in/fabio-sicca/" target="_blank">
               <svg
-                className="button-icon"
+                className="button-icon linkedin-icon"
                 role="presentation"
                 aria-hidden="true"
               >

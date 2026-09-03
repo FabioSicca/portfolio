@@ -54,6 +54,10 @@
   filter: invert(1) brightness(2);
 }
 
+:root[data-theme='dark'] .social-links .linkedin-icon {
+  filter: none;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
