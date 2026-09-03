@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import type { Project } from '../data/projects'
 
 interface ProjectCardProps {
@@ -52,9 +53,9 @@ function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        <a href={project.link} className="project-link">
+        <Link to={project.link} className="project-link">
           View project →
-        </a>
+        </Link>
       </div>
       {project.image && (
         <div className="project-card-media">

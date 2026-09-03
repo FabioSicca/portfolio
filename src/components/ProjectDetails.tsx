@@ -1,4 +1,5 @@
 import type { Project } from '../data/projects'
+import { Link } from 'react-router-dom'
 import MedicalImagingDetails from './MedicalImagingDetails'
 import MiniDynamodbDetails from './MiniDynamodbDetails'
 
@@ -9,9 +10,9 @@ interface ProjectDetailsProps {
 function ProjectDetails({ project }: ProjectDetailsProps) {
   return (
     <main className="project-details">
-      <a className="back-link" href="/">
+      <Link className="back-link" to="/">
         ← Back to portfolio
-      </a>
+      </Link>
       {project.link.endsWith('mini-dynamodb') ? (
         <MiniDynamodbDetails project={project} />
       ) : (

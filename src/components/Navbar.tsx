@@ -1,23 +1,24 @@
 import { projects } from '../data/projects'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <header className="site-header">
       <nav className="site-nav" aria-label="Main navigation">
-        <a className="nav-link" href="/">
+        <Link className="nav-link" to="/">
           Home
-        </a>
-        <a className="nav-link" href="/#about">
+        </Link>
+        <Link className="nav-link" to="/#about">
           About
-        </a>
+        </Link>
         <details className="projects-menu">
           <summary className="nav-link">Projects</summary>
           <div className="projects-dropdown">
-            <a href="/#projects">All projects</a>
+            <Link to="/#projects">All projects</Link>
             {projects.map((project) => (
-              <a key={project.link} href={project.link}>
+              <Link key={project.link} to={project.link}>
                 {project.title}
-              </a>
+              </Link>
             ))}
           </div>
         </details>
