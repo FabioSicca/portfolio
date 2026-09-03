@@ -70,6 +70,64 @@
   }
 }
 
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 500px);
+  align-items: center;
+  gap: 48px;
+  width: min(1100px, 100%);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.profile-info h1 {
+  margin: 0 0 8px;
+}
+
+.profile-info h2 {
+  margin: 0 0 16px;
+}
+
+.profile-info .text-justify {
+  margin: 0;
+}
+
+.profile-animation {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  justify-self: center;
+}
+
+@media (max-width: 1024px) {
+  .profile-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 280px);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .profile-info {
+    gap: 16px;
+  }
+
+  .profile-animation {
+    max-width: 260px;
+  }
+}
+
 .text-justify {
   text-align: justify;
   margin: 0 24px;

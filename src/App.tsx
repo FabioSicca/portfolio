@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import MyImg from './assets/profile-image.png'
+import profileAnimation from './assets/profile-animation.png'
 import './App.css'
 import ThemeToggle from './components/ThemeToggle'
 import Projects from './components/Projects'
@@ -38,15 +39,24 @@ function App() {
       ) : (
       <>
       <section id="center">
-        <div className="hero">
-          <img src={MyImg} className="base" width="170" height="170" alt="" />
-        </div>
-        <div>
-          <h1>Fabio Sicca</h1>
-          <h2>Software Engineer</h2>
-          <p className="text-justify">
-            Hi, I'm Fabio Sicca, a passionate Backend Developer with a strong focus on creating efficient and scalable solutions. I specialize in building robust backend systems, APIs, and services that power modern applications. With a keen eye for detail and a commitment to best practices, I strive to deliver high-quality code that meets the needs of both users and businesses.
-          </p>
+        <div className="profile-layout">
+          <div className="profile-info">
+            <div className="hero">
+              <img src={MyImg} className="base" width="170" height="170" alt="" />
+            </div>
+            <div>
+              <h1>Fabio Sicca</h1>
+              <h2>Software Engineer</h2>
+              <p className="text-justify">
+                Hi, I'm Fabio Sicca, a passionate Backend Developer with a strong focus on creating efficient and scalable solutions. I specialize in building robust backend systems, APIs, and services that power modern applications. With a keen eye for detail and a commitment to best practices, I strive to deliver high-quality code that meets the needs of both users and businesses.
+              </p>
+            </div>
+          </div>
+          <img
+            className="profile-animation"
+            src={profileAnimation}
+            alt=""
+          />
         </div>
         <ul className="social-links">
           <li>
