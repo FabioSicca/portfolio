@@ -3,6 +3,8 @@ import MyImg from './assets/profile-image.png'
 import './App.css'
 import ThemeToggle from './components/ThemeToggle'
 import Projects from './components/Projects'
+import ProjectDetails from './components/ProjectDetails'
+import { projects } from './data/projects'
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() =>
@@ -15,6 +17,11 @@ function App() {
     document.documentElement.dataset.theme = theme
   }, [theme])
 
+  const projectSlug = window.location.pathname.split('/').filter(Boolean)[1]
+  const selectedProject = projectSlug
+    ? projects.find((project) => project.link.endsWith(projectSlug))
+    : undefined
+
   return (
     <>
       <ThemeToggle
@@ -26,12 +33,17 @@ function App() {
         }
       />
 
+      {selectedProject ? (
+        <ProjectDetails project={selectedProject} />
+      ) : (
+      <>
       <section id="center">
         <div className="hero">
           <img src={MyImg} className="base" width="170" height="170" alt="" />
         </div>
         <div>
           <h1>Fabio Sicca</h1>
+          <h2>Software Engineer</h2>
           <p className="text-justify">
             Hi, I'm Fabio Sicca, a passionate Backend Developer with a strong focus on creating efficient and scalable solutions. I specialize in building robust backend systems, APIs, and services that power modern applications. With a keen eye for detail and a commitment to best practices, I strive to deliver high-quality code that meets the needs of both users and businesses.
           </p>
@@ -64,6 +76,8 @@ function App() {
         </ul>
       </section>
       <Projects />
+      </>
+      )}
     </>
   )
 }

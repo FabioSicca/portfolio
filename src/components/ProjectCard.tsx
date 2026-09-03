@@ -56,6 +56,11 @@ function ProjectCard({ project }: ProjectCardProps) {
           View project →
         </a>
       </div>
+      {project.image && (
+        <div className="project-card-media">
+          <img src={project.image} alt={`${project.title} preview`} />
+        </div>
+      )}
     </article>
   )
 }
