@@ -23,7 +23,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         }
       },
       {
-        threshold: 0.15,
+        threshold: 0.40,
       },
     )
 
