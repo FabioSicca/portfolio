@@ -1,14 +1,27 @@
+import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { projects } from '../data/projects'
-import { Link } from 'react-router-dom'
 
 function Navbar() {
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash !== '#about') {
+      return
+    }
+
+    requestAnimationFrame(() => {
+      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+    })
+  }, [location])
+
   return (
     <header className="site-header">
       <nav className="site-nav" aria-label="Main navigation">
         <Link className="nav-link" to="/">
           Home
         </Link>
-        <Link className="nav-link" to="/#about">
+        <Link className="nav-link" to="/about">
           About
         </Link>
         <details className="projects-menu">

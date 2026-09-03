@@ -6,6 +6,7 @@ import './App.css'
 import ThemeToggle from './components/ThemeToggle'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import About from './components/About'
 import ProjectDetails from './components/ProjectDetails'
 import { projects } from './data/projects'
 
@@ -34,6 +35,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
         <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
@@ -46,7 +48,7 @@ function HomePage() {
     <>
       <section id="center">
         <div className="profile-layout">
-          <div id="about" className="profile-info">
+          <div className="profile-info">
             <div className="Image-container">
               <img src={MyImg} className="base" width="170" height="170" alt="" />
             </div>
@@ -83,6 +85,7 @@ function HomePage() {
     </>
   )
 }
+
 
 function ProjectPage() {
   const { slug } = useParams()
