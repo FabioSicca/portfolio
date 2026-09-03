@@ -70,6 +70,11 @@
   }
 }
 
+.text-justify {
+  text-align: justify;
+  margin: 0 24px;
+}
+
 #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
@@ -104,7 +109,8 @@
   }
 }
 
-#next-steps ul {
+#next-steps ul,
+.social-links {
   list-style: none;
   padding: 0;
   display: flex;
