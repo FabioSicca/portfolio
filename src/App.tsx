@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import MyImg from './assets/profile-image.png'
 import './App.css'
 import ThemeToggle from './components/ThemeToggle'
+import Projects from './components/Projects'
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() =>
@@ -62,6 +63,7 @@ function App() {
           </li>
         </ul>
       </section>
+      <Projects />
     </>
   )
 }
