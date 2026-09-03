@@ -41,7 +41,7 @@ function App() {
       <section id="center">
         <div className="profile-layout">
           <div className="profile-info">
-            <div className="hero">
+            <div className="Image-container">
               <img src={MyImg} className="base" width="170" height="170" alt="" />
             </div>
             <div>
