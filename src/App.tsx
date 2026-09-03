@@ -3,6 +3,7 @@ import MyImg from './assets/profile-image.png'
 import profileAnimation from './assets/profile-animation.png'
 import './App.css'
 import ThemeToggle from './components/ThemeToggle'
+// @ts-ignore
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import ProjectDetails from './components/ProjectDetails'
