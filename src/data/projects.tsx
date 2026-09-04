@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     title: 'Medical Imaging Diagnosis Platform',
     description:
-      'Platform for medical image analysis using deep learning models for Alzheimer’s disease classification.',
+      'Platform for medical image analysis using deep learning models for disease segmentation and classification.',
     overview:
       'This platform provides a service for analyzing medical images with deep learning models. It combines a Python inference pipeline with an API designed to make model predictions accessible to other applications.',
     highlights: [
