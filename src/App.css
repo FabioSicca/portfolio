@@ -29,8 +29,7 @@
   box-shadow: var(--shadow);
 }
 
-.nav-link,
-.projects-menu summary {
+.nav-link {
   display: block;
   padding: 8px 14px;
   border-radius: 6px;
@@ -38,12 +37,14 @@
   font-size: 15px;
   text-decoration: none;
   cursor: pointer;
+  border: 0;
+  background: transparent;
+  font: inherit;
 }
 
 .nav-link:hover,
-.projects-menu[open] summary,
-.nav-link:focus-visible,
-.projects-menu summary:focus-visible {
+.projects-menu:hover .projects-trigger,
+.nav-link:focus-visible {
   color: var(--text-h);
   background: var(--social-bg);
   outline: none;
@@ -53,15 +54,16 @@
   position: relative;
 }
 
-.projects-menu summary {
-  list-style: none;
+.projects-menu::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 8px;
 }
 
-.projects-menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.projects-menu summary::after {
+.projects-trigger::after {
   content: '⌄';
   margin-left: 7px;
   color: var(--accent);

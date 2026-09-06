@@ -67,12 +67,21 @@
 }
 
 .project-technology {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 6px 10px;
   border-radius: 6px;
   background: var(--bg);
   color: var(--text-h);
   font-family: var(--mono);
   font-size: 14px;
+}
+
+.technology-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .project-link,
