@@ -10,7 +10,7 @@ interface MiniDynamodbDetailsProps {
 
 function MiniDynamodbDetails({ project }: MiniDynamodbDetailsProps) {
   return (
-    <>
+    <div className="mini-dynamodb-details" lang="en">
       <header className="project-hero project-hero-database">
         <p className="project-eyebrow">Distributed database prototype</p>
         <h1>{project.title}</h1>
@@ -226,16 +226,8 @@ function MiniDynamodbDetails({ project }: MiniDynamodbDetailsProps) {
             ))}
           </div>
         </section>
-        <section>
-          <p className="project-section-label">What I explored</p>
-          <ul className="project-closing-list">
-            {project.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
-            ))}
-          </ul>
-        </section>
       </section>
-    </>
+    </div>
   )
 }
 

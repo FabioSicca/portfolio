@@ -5,6 +5,8 @@ import profileAnimation from './assets/profile-animation.png'
 import './App.css'
 import ThemeToggle from './components/ThemeToggle'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Projects from './components/Projects'
 import About from './components/About'
 import ProjectDetails from './components/ProjectDetails'
@@ -24,6 +26,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <ThemeToggle
         theme={theme}
         onToggle={() =>
@@ -39,6 +42,7 @@ function App() {
         <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </>
   )
 }
