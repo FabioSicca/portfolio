@@ -1,20 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 
 function Navbar() {
-  const location = useLocation()
   const [projectsOpen, setProjectsOpen] = useState(false)
-
-  useEffect(() => {
-    if (location.hash !== '#about') {
-      return
-    }
-
-    requestAnimationFrame(() => {
-      document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-    })
-  }, [location])
 
   useEffect(() => {
     const closeWithEscape = (event: KeyboardEvent) => {
