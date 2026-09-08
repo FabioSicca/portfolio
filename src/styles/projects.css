@@ -225,6 +225,15 @@
   padding-left: 20px;
 }
 
+.mini-dynamodb-details .project-hero > p:last-child,
+.mini-dynamodb-details .project-intro-section > p:last-child,
+.mini-dynamodb-details .project-detail-copy p,
+.mini-dynamodb-details .project-operation-list p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
 .project-image-placeholder {
   display: grid;
   place-items: center;
@@ -517,6 +526,14 @@
 }
 
 @media (max-width: 640px) {
+  .mini-dynamodb-details .project-hero > p:last-child,
+  .mini-dynamodb-details .project-intro-section > p:last-child,
+  .mini-dynamodb-details .project-detail-copy p,
+  .mini-dynamodb-details .project-operation-list p {
+    text-align: left;
+    hyphens: none;
+  }
+
   .project-card {
     grid-template-columns: 1fr;
   }
